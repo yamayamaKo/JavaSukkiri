@@ -1,7 +1,22 @@
 package _9;
 
 public class Main {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
+        Hero hero = new Hero();
+
+        System.out.println(hero.hp);
+        System.out.println(hero.name);
+
+        Hero hero2 = new Hero("変えた名前");
+
+        System.out.println(hero2.hp);
+        System.out.println(hero2.name);
+
+        Thief thief = new Thief("hoge");
+    }
+
+    public static void main2(String[] args) {
         Sword sword = new Sword();
         sword.name = "炎の剣";
         sword.damage = 10;
