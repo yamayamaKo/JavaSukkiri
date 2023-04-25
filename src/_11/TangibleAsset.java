@@ -1,18 +1,15 @@
 package _11;
 
-public class TangibleAsset {
-    String name;
+public class TangibleAsset extends Asset implements Thing {
     int price;
     String color;
 
+    double weight = 0.0;
+
     public TangibleAsset(final String name, final int price, final String color) {
-        this.name = name;
+        super(name);
         this.price = price;
         this.color = color;
-    }
-
-    public String getName() {
-        return this.name;
     }
 
     public int getPrice() {
@@ -21,5 +18,15 @@ public class TangibleAsset {
 
     public String getColor() {
         return this.color;
+    }
+
+    @Override
+    public void setWeight(final double weight) {
+        this.weight = weight;
+    }
+
+    @Override
+    public double getWeight() {
+        return this.weight;
     }
 }
